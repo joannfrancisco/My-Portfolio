@@ -1,0 +1,22 @@
+.link-tooltip {
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -120%) scale(0.95);
+  background: rgba(0, 0, 0, 0.85);
+  color: #c80018;
+  padding: 6px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+  opacity: 0;
+  transition: opacity 140ms ease, transform 140ms ease;
+  z-index: 9999;
+}
+
+.link-tooltip.show {
+  opacity: 1;
+  transform: translate(-50%, -140%) scale(1);
+}
