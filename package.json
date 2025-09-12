@@ -12,6 +12,10 @@
     "dotenv": "^17.2.1",
     "emailjs-com": "^3.2.0",
     "express": "^5.1.0",
+<<<<<<< HEAD
+=======
+    "gh-pages": "^6.3.0",
+>>>>>>> e264231 (Initial commit)
     "googleapis": "^158.0.0",
     "motion": "^12.23.12",
     "nodemailer": "^7.0.5",
@@ -29,7 +33,14 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+<<<<<<< HEAD
     "eject": "react-scripts eject"
+=======
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+
+>>>>>>> e264231 (Initial commit)
   },
   "eslintConfig": {
     "extends": [
@@ -56,5 +67,10 @@
   },
   "keywords": [],
   "author": "",
+<<<<<<< HEAD
   "license": "ISC"
+=======
+  "license": "ISC",
+  "homepage": "https://your-username.github.io/My-portfolio"
+>>>>>>> e264231 (Initial commit)
 }
