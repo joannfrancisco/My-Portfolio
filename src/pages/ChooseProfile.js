@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import recruiter from "../assets/prof-recruiter.jpg";
-import stalker from "../assets/prof-stalker.jpg";
+import recruiter from "../assets/prof-recruiter.png";
+import stalker from "../assets/prof-stalker.png";
 
 export default function ChooseProfile() {
   const navigate = useNavigate();

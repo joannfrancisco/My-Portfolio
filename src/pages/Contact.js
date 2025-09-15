@@ -120,13 +120,13 @@ export default function Contact() {
 
             {/* Success / Error Notifications */}
             {status === "success" && (
-              <div className="notification-bar success">
+              <div className="message-bar success">
                 ✅ Message sent successfully!
               </div>
             )}
 
             {status === "error" && (
-              <div className="notification-bar error">
+              <div className="message-bar error">
                 ❌ Failed to send. Please try again.
               </div>
             )}

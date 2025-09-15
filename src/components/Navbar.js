@@ -1,8 +1,8 @@
 import "./Navbar.css";
 import logo from "../assets/logo.svg";
 import React, { useState } from "react";
-import recruiter from "../assets/prof-recruiter.jpg";
-import stalker from "../assets/prof-stalker.jpg";
+import recruiter from "../assets/prof-recruiter.png";
+import stalker from "../assets/prof-stalker.png";
 import { useNavigate, useLocation, Link } from "react-router-dom";
 
 export default function Navbar() {
