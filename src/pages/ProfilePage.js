@@ -62,12 +62,13 @@ export default function ProfilePage() {
                 muted
                 playsInline
                 className="video-preview show-link-tooltip"
-                onMouseEnter={(e) => e.target.play()}
+                onMouseEnter={(e) => e.target.play().catch(() => {})}
                 onMouseLeave={(e) => {
                   e.target.pause();
                   e.target.currentTime = 0; // reset to first frame
                 }}
               />
+
               <div className="featured-text-section">
                 <h3 className="f-card-name">{feat.title}</h3>
                 <p className="f-card-desc">{feat.description}</p>
@@ -91,7 +92,7 @@ export default function ProfilePage() {
           <Link to="/skills" state={{ profile }} className="video-card">
             <img
               src={skillsImage}
-              alt="Skills Preview"
+              alt="codes on the screen"
               className="video-preview"
             />
             <div className="overlay">
@@ -102,7 +103,7 @@ export default function ProfilePage() {
           <Link to="/projects" state={{ profile }} className="video-card">
             <img
               src={projectsImage}
-              alt="Skills Preview"
+              alt="question mark cardboards"
               className="video-preview"
             />
             <div className="overlay">
@@ -111,11 +112,7 @@ export default function ProfilePage() {
           </Link>
 
           <Link to="/about" state={{ profile }} className="video-card">
-            <img
-              src={aboutImage}
-              alt="Skills Preview"
-              className="video-preview"
-            />
+            <img src={aboutImage} alt="books" className="video-preview" />
             <div className="overlay">
               <p>About</p>
             </div>
@@ -124,7 +121,7 @@ export default function ProfilePage() {
           <Link to="/contact" state={{ profile }} className="video-card">
             <img
               src={contactImage}
-              alt="Skills Preview"
+              alt="a black old telephone"
               className="video-preview"
             />
             <div className="overlay">

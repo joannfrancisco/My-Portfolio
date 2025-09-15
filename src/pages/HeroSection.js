@@ -42,8 +42,8 @@ export default function HeroSection() {
   // 🔹 Restart video when profile/video changes
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.load(); // reload the new src
-      videoRef.current.play().catch(() => {}); // avoid autoplay errors
+      videoRef.current.load(); // reload new src
+      videoRef.current.play().catch(() => {}); // prevent autoplay errors
     }
   }, [video]);
 
