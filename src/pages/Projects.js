@@ -33,9 +33,7 @@ const project = [
 export default function Projects() {
   return (
     <div className="container">
-      <div className="heading-container">
-        <h1 className="secondary-font netflix-underline">Projects</h1>
-      </div>
+      <h1 className="secondary-font heading-text">Projects</h1>
 
       <div className="cards-grid-proj">
         <LinkTooltip />
@@ -72,7 +70,6 @@ export default function Projects() {
             </div>
           </a>
         ))}
-        <LinkTooltip />
       </div>
     </div>
   );

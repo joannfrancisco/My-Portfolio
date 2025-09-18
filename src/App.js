@@ -9,10 +9,12 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Skills from "./pages/Skills";
 import ProfilePage from "./pages/ProfilePage";
+import AnalyticsTracker from "./components/AnalyticsTracker";
 
 function App() {
   return (
     <Router>
+      <AnalyticsTracker />
       <Routes>
         {/* no navbar */}
         <Route path="/" element={<Intro />} />

@@ -38,14 +38,16 @@ const featured = [
 
 export default function ProfilePage() {
   const location = useLocation();
-  const { profile } = location.state || {}; // get profile from navigation
+  const { profile } = location.state || {};
 
   return (
     <div>
       <HeroSection />
 
       <div className="container">
-        <h2 className="skill-title">Featured Projects</h2>
+        <h2 className="skill-title" id="featured">
+          Featured Projects
+        </h2>
 
         <div className="cards-grid-proj">
           <LinkTooltip />

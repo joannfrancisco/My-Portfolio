@@ -1,77 +1,95 @@
 import { useLocation } from "react-router-dom";
-import { useEffect, useRef } from "react";
-import recruiterVideo from "../assets/video-recruiter.mp4";
-import stalkerVideo from "../assets/video-stalker.mp4";
-import defaultVideo from "../assets/video-recruiter.mp4"; // fallback
-import linkedin from "../assets/linkedin.svg";
+import LiquidEther from "../components/LiquidEther";
+import DotGrid from "../components/DotGrid";
 
 export default function HeroSection() {
   const location = useLocation();
   const { profile } = location.state || {};
-  const videoRef = useRef(null);
 
-  // 🔹 Define content for each profile
   const profileContent = {
     Recruiter: {
-      heading: "HI, I'M JOANN.",
-      title: "Full-Stack Web Developer.",
-      subtitle:
-        "I build modern, responsive websites that combine precision with creativity to deliver seamless digital experiences.",
-      video: recruiterVideo,
+      background: (
+        <LiquidEther
+          colors={["#5227FF", "#FF9FFC", "#B19EEF"]}
+          mouseForce={20}
+          cursorSize={100}
+          isViscous={false}
+          viscous={30}
+          iterationsViscous={32}
+          iterationsPoisson={32}
+          resolution={0.5}
+          isBounce={false}
+          autoDemo={true}
+          autoSpeed={0.5}
+          autoIntensity={2.2}
+          takeoverDuration={0.25}
+          autoResumeDelay={3000}
+          autoRampDuration={0.6}
+        />
+      ),
     },
     Stalker: {
-      heading: "HI, I'M JOANN.",
-      title: "Full-Stack Web Developer.",
-      subtitle:
-        "I build modern, responsive websites that combine precision with creativity to deliver seamless digital experiences.",
-      video: stalkerVideo,
+      background: (
+        <DotGrid
+          dotSize={5}
+          gap={15}
+          baseColor="#271616"
+          activeColor="#7a0505"
+          proximity={120}
+          shockRadius={250}
+          shockStrength={5}
+          resistance={750}
+          returnDuration={1.5}
+        />
+      ),
     },
     default: {
-      heading: "HI, I'M JOANN.",
-      title: "Full-Stack Web Developer.",
-      subtitle:
-        "I build modern, responsive websites that combine precision with creativity to deliver seamless digital experiences.",
-      video: defaultVideo,
+      background: (
+        <DotGrid
+          dotSize={5}
+          gap={15}
+          baseColor="#5227FF"
+          activeColor="#5227FF"
+          proximity={120}
+          shockRadius={250}
+          shockStrength={5}
+          resistance={750}
+          returnDuration={1.5}
+        />
+      ),
     },
   };
 
-  // Pick the right profile (fallback → default)
-  const { heading, title, subtitle, video } =
-    profileContent[profile] || profileContent.default;
-
-  // 🔹 Restart video when profile/video changes
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.load(); // reload new src
-      videoRef.current.play().catch(() => {}); // prevent autoplay errors
-    }
-  }, [video]);
+  const { background } = profileContent[profile] || profileContent.default;
 
   return (
     <div className="hero-section">
       <div className="hero-text">
-        <h2>{heading}</h2>
-        <h1>{title}</h1>
-        <h3>{subtitle}</h3>
+        <h1>
+          I design and build <span>websites.</span>
+        </h1>
+        <h2>
+          Modern. Responsive. Creative. As a full-stack developer, I deliver
+          seamless digital experiences built with precision.
+        </h2>
         <a
-          href="https://www.linkedin.com/in/joannfrancisco"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="#featured"
           className="animated-button"
+          onClick={(e) => {
+            e.preventDefault();
+            document
+              .getElementById("featured")
+              ?.scrollIntoView({ behavior: "smooth" });
+          }}
         >
           <span></span>
           <span></span>
           <span></span>
           <span></span>
-          <img src={linkedin} alt="LinkedIn Logo" />
-          LinkedIn
+          Learn More
         </a>
       </div>
-      <div className="hero-video">
-        <video ref={videoRef} autoPlay loop muted playsInline>
-          <source src={video} type="video/mp4" />
-        </video>
-      </div>
+      <div className="hero-background">{background}</div>
     </div>
   );
 }

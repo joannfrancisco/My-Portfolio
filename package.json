@@ -14,26 +14,29 @@
     "express": "^5.1.0",
     "gh-pages": "^6.3.0",
     "googleapis": "^158.0.0",
+    "gsap": "^3.13.0",
     "motion": "^12.23.12",
     "nodemailer": "^7.0.5",
     "react": "^17.0.0 || ^18.0.0 || ^19.0.0",
     "react-dom": "^17.0.0 || ^18.0.0 || ^19.0.0",
+    "react-google-recaptcha": "^3.1.0",
     "react-router-dom": "^7.8.1",
     "react-scripts": "5.0.1",
+    "three": "^0.180.0",
     "web-vitals": "^2.1.4"
   },
   "peerDependencies": {
     "react": "^17.0.0 || ^18.0.0 || ^19.0.0",
     "react-dom": "^17.0.0 || ^18.0.0 || ^19.0.0"
   },
-"scripts": {
-  "start": "react-scripts start",
-  "build": "react-scripts build",
-  "test": "react-scripts test",
-  "eject": "react-scripts eject",
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
-},
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",

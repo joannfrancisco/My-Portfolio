@@ -17,13 +17,13 @@ export default function ChooseProfile() {
       <div className="profiles">
         {/* Recruiter */}
         <div onClick={() => handleClick("Recruiter")}>
-          <img src={recruiter} alt="Golden Retriever wearing sunglasses" />
+          <img src={recruiter} alt="cartoonized version of a recruiter" />
           <p>Recruiter</p>
         </div>
 
         {/* Stalker */}
         <div onClick={() => handleClick("Stalker")}>
-          <img src={stalker} alt="cute puppy" />
+          <img src={stalker} alt="cartoonized version of a hacker in hoodie" />
           <p>Stalker</p>
         </div>
       </div>

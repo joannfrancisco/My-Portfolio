@@ -12,21 +12,18 @@ export default function About() {
               I was a former banker here in the Philippines with 15 years of
               experience in customer service and management. Now, I’m starting a
               brand-new journey as a full-stack developer. I may still be
-              considered a junior, but I have the passion and drive to build
-              modern, responsive websites that truly capture the audience’s
+              considered a junior, but I have the passion and drive to hone my
+              skills in creating websites that truly capture the audience’s
               attention. For me, it’s never too late to chase your dreams and
               this career shift is proof of that.
             </p>
             <p>
-              Oh, and one more thing, I’m a big movie lover that’s why this
-              portfolio is Netflix-inspired. I had a lot of fun putting it
-              together, and I hope you enjoy it as much as I enjoyed creating
-              it.
+              I’m excited to help you design and build a website that truly
+              stands out. 🤗
             </p>
-            <p>
-              Now, let me help you design and build websites that are not only
-              functional but also engaging. 🤗
-            </p>
+            <br />
+            <p>All the best,</p>
+            <p>♥ Jo Ann Francisco ♥</p>
           </div>
           <div className="about-image">
             <img src={profileImg} alt="About" />

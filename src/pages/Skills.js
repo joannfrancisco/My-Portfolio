@@ -102,9 +102,8 @@ export default function SkillPage() {
 
   return (
     <div className="container">
-      <div className="heading-container">
-        <h1 className="secondary-font netflix-underline">My Skills</h1>
-      </div>
+      <h1 className="secondary-font heading-text">My Skills</h1>
+
       {skills.map((skill, index) => (
         <div key={index} className="skill-section">
           <h2 className="skill-title">{skill.title}</h2>

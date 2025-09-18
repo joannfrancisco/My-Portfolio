@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import emailjs from "emailjs-com";
+import ReCAPTCHA from "react-google-recaptcha";
 
 export default function Contact() {
   const form = useRef();
@@ -7,6 +8,7 @@ export default function Contact() {
   const [coords, setCoords] = useState({ x: 0, y: 0 });
   const [status, setStatus] = useState(null); // 'success' | 'error' | null
   const [emailError, setEmailError] = useState(""); // validation error state
+  const [captchaValid, setCaptchaValid] = useState(false);
 
   const copyToClipboard = (e) => {
     navigator.clipboard.writeText("joannfrancisco.dev@gmail.com");
@@ -32,6 +34,11 @@ export default function Contact() {
       return;
     } else {
       setEmailError(""); // clear error
+    }
+
+    if (!captchaValid) {
+      alert("⚠️ Please verify the reCAPTCHA.");
+      return;
     }
 
     emailjs
@@ -60,9 +67,9 @@ export default function Contact() {
         <div className="contact-text">
           <h2 className="secondary-font">Let's Connect!</h2>
           <p>
-            If you ever want to grab a coffee/bubble tea (virtually) or just
-            want a quick chat, you can find me on social media or you can send
-            me a message here!
+            If you ever want to grab a cup of coffee/bubble tea (virtually) or
+            just want a quick chat, you can find me on social media or you can
+            send me a message here!
           </p>
         </div>
 
@@ -113,6 +120,15 @@ export default function Contact() {
                 required
                 placeholder="enter your message"
               ></textarea>
+            </div>
+
+            <div className="recaptcha-container">
+              <ReCAPTCHA
+                className="g-recaptcha"
+                sitekey="6Lfloc0rAAAAAKTT0Z7ZQTG2VejHiD0oBOT4Bo9s"
+                theme="dark"
+                onChange={() => setCaptchaValid(true)}
+              />
             </div>
 
             {/* Submit Button */}
