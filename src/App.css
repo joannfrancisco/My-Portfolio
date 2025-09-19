@@ -44,6 +44,10 @@ body {
   font-weight: 400;
 }
 
+.intro-container h1 {
+    font-size: 2.5rem;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -573,11 +577,9 @@ line-height: 1.3;
 
 .contact-form {
   padding: 1rem;
-  border-radius: 10px;
   overflow: hidden;
   background: rgba(0, 0, 0, 0.85);
   width: 100%;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
 }
 
 .contact-form label {
@@ -774,6 +776,10 @@ line-height: 1.3;
   line-height: 1.6;
   margin-bottom: 1rem;
   padding-right: 300px;
+}
+
+.break {
+  display: none;
 }
 
 .heading-text {
@@ -996,7 +1002,7 @@ line-height: 1.3;
 
 /* Target the wrapper */
 .recaptcha-container {
-  width: 100%;
+  max-width: 100%;
   display: flex;
   justify-content: left; 
   background: transparent;
@@ -1014,12 +1020,12 @@ line-height: 1.3;
     text-align: center;
   }
   .hero-text {
-    padding: 5rem;
+    padding: 8rem;
     text-align: center;
     max-width: 900px;
   }
   .hero-text h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     text-align: center;
     line-height: 3rem;
     margin-top: .2rem;
@@ -1029,9 +1035,10 @@ line-height: 1.3;
     font-size: 1rem;
     text-align: center;
     padding: 0;
+    text-align: center;
   }
-  .hero-text h3 {
-    font-size: 1.2rem;
+  .break {
+    display: inline;
   }
   .cards-grid-proj, .cards-grid-skill > * {
     flex: 1 1 45%; 
@@ -1039,6 +1046,9 @@ line-height: 1.3;
 }
 
 @media (max-width: 768px) {
+  .hero-text {
+    padding: 5rem;
+  }
   .cards-grid-proj, .cards-grid-skill > * {
     flex: 1 1 100%;  /* single column */
     justify-content: center;
@@ -1097,36 +1107,52 @@ line-height: 1.3;
     flex: 1 1 150px;   
     max-width: 200px;  
   }
-  .intro-container h1 {
-    font-size: 2.5rem;
-  }
   .intro-container {
     padding: 2rem;
   }
 }
 
 @media (max-width: 576px) {
-  .cards-grid-skill {
-    justify-content: center;
+  .hero-text {
+    padding: 4rem;
+    text-align: center;
+    max-width: 576px;
+  }
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  .featured-video-card {
+    margin: 0 10px 25px 10px;
   }
   .cards-grid-skill > * {
-    flex: 1 1 200px;   
+    display: flex;
+    flex-direction: column;
     max-width: 100%;  
   }
   .video-card{
-    margin-bottom: 1.5rem;
     height: 100px;
+    margin: 0 10px 25px 10px;
   }
   .heading-text {
     margin: 1rem auto;
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   .skill-title {
-    font-size: 1.4rem;
-    margin-top: 2rem;
+    font-size: 1.5rem;
+    margin-top: 1rem;
   }
   .cards-grid-proj {
     margin-top: 2rem;
+    justify-content: center;    
+  }
+ .contact-container {
+   padding: 2rem .1rem;
+  }
+  .container {
+    padding: 15px 15px;
+  }
+  .intro-container h1 {
+    font-size: 2.3rem;
   }
 }
 

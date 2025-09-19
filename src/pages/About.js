@@ -9,21 +9,20 @@ export default function About() {
             <h2 className="secondary-font">About Me</h2>
             <p>Hello again! Thanks for coming this far! 🤗</p>
             <p>
-              I was a former banker here in the Philippines with 15 years of
-              experience in customer service and management. Now, I’m starting a
-              brand-new journey as a full-stack developer. I may still be
-              considered a junior, but I have the passion and drive to hone my
-              skills in creating websites that truly capture the audience’s
-              attention. For me, it’s never too late to chase your dreams and
-              this career shift is proof of that.
+              I’m Jo Ann Francisco. After many years of working as a banker in
+              the Philippines, I’ve started a brand-new journey as a full-stack
+              developer. I may still be considered a junior, but I’m passionate
+              about learning and dedicated to creating websites that truly
+              connect with people. For me, it’s never too late to chase your
+              dreams, and this career shift is proof of that.
             </p>
             <p>
               I’m excited to help you design and build a website that truly
-              stands out. 🤗
+              stands out.
             </p>
             <br />
             <p>All the best,</p>
-            <p>♥ Jo Ann Francisco ♥</p>
+            <p>Jo Ann ♥</p>
           </div>
           <div className="about-image">
             <img src={profileImg} alt="About" />

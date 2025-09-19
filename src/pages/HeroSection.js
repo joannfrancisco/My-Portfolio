@@ -23,7 +23,7 @@ export default function HeroSection() {
           autoSpeed={0.5}
           autoIntensity={2.2}
           takeoverDuration={0.25}
-          autoResumeDelay={3000}
+          autoResumeDelay={500}
           autoRampDuration={0.6}
         />
       ),
@@ -66,10 +66,10 @@ export default function HeroSection() {
     <div className="hero-section">
       <div className="hero-text">
         <h1>
-          I design and build <span>websites.</span>
+          I design and build <span>websites</span>.
         </h1>
         <h2>
-          Modern. Responsive. Creative. As a full-stack developer, I deliver
+          <b>Modern. Responsive. Creative.</b> <br className="break" />I deliver
           seamless digital experiences built with precision.
         </h2>
         <a
