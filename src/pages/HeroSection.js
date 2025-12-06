@@ -69,8 +69,8 @@ export default function HeroSection() {
           I design and build <span>websites</span>.
         </h1>
         <h2>
-          <b>Modern. Responsive. Creative.</b> <br className="break" />I deliver
-          seamless digital experiences built with precision.
+          <b>Modern. Responsive. Creative.</b> <br className="break" />
+          Seamless digital experiences, crafted with precision.
         </h2>
         <a
           href="#featured"
